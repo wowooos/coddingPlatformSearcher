@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Estilo para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 0px; /* Largura da barra de rolagem vertical */
+    height: 6px; /* Altura da barra de rolagem horizontal */
+}
+
+/* Estilo para o "polegar" da barra de rolagem (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: #414040a4; /* Cor do polegar */
+    border-radius: 50px;
+}
+
+html, body{
+    height: 100%; /* Ocupa 100% da altura da janela */
+    margin: 0;    /* Remove a margem padrão */
+    padding: 0;   /* Remove o padding padrão */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Chakra Petch", sans-serif;
+    color: whitesmoke;
+
+    background: #01080E;
+
+    height: 100%; /* Preenche a altura total da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+header{
+    flex: 0 0 auto; /* O header não cresce nem encolhe, ocupa apenas o espaço necessário */
+    padding: 10px; /* Ajuste o padding conforme necessário */
+}
+
+h1 {
+    margin: 0px;
+    padding: 2rem 0.5rem 2rem 0.5rem;
+
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: 200;
+    text-align: left; /* Alinha o texto ao centro */
+    letter-spacing: 0.3rem; /* Espaçamento entre letras */
+
+    color: #21ffb5; /* Cor do texto */
+    text-shadow: 2px 1px 4px #21ffb5;
+
+
+    transform: scale(1); /* Aumenta o tamanho em 10% */
+    transition: transform 0.7s ease-in-out; /*Adiciona uma transição suave*/
+}
+
+h1.loaded{
+    transform: scale(0.98);
+}
+
+h1:hover{
+    transform: scale(0.97); /* Aumenta o tamanho em 10% */
+}
+
+main{
+    flex: 1; /* O main ocupa o restante do espaço disponível */
+    overflow: hidden; /* Remove a barra de rolagem se houver overflow */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+    align-items: stretch;
+
+    gap: 10px;
+
+    height: 100vh;  /*ocupa toda a altura do body*/
+    padding: 0 30px; /* Adiciona espaçamento interno nas laterais do main */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+}
+
+img{
+    width: 620px;
+}
+
+.titulo-resultado{
+    font-weight: 500;
+    margin: auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    
+    color: #D2F3F9;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.subtitulo-resultado{
+    font-weight: 500;
+    color: #b4b4b4;
+    text-shadow: 0px 0px 1px #595b5f;
+    line-height: 1.6;
+    letter-spacing: 0.1rem;
+}
+
+.paragrafo-resultado{
+    letter-spacing: 0.05rem;
+    line-height: 2.0;
+    font-size: 15px;
+    color: #8c8d8d;
+    text-align: justify;
+}
+
+.mensagem-alerta-codigo{
+    color: #d2f3f9cb;
+    font-size: 0.75em;
+    text-align: left;
+    letter-spacing: 0.05rem;
+
+}
+
+.link-resultado{
+    text-decoration: none;
+    color: #21ffb5;
+    transition: text-decoration 0.5s ease;
+}
+
+/* Estilo inicial do link */
+.link-resultado {
+    letter-spacing: 0.05rem;
+    font-weight: 900;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: whistemoke; /* Cor do link */
+    position: relative; /* Necessário para a posição do pseudo-elemento */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+/* Pseudo-elemento para a underline */
+.link-resultado::after {
+    content: ''; /* Necessário para criar um pseudo-elemento */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Espessura da linha */
+    background-color: #21ffb5; /* Cor da underline */
+    transform: scaleX(0); /* Inicialmente invisível */
+    transition: transform 0.3s ease; /* Transição suave para a underline */
+}
+
+/* Estilo do link quando o mouse passa sobre ele */
+.link-resultado:hover::after {
+    transform: scaleX(1); /* Exibe a underline ao passar o mouse */
+}
+
+/* ----------------------------------------------------------------------------------- */
+section{
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    overflow: auto; /* Adiciona uma barra de rolagem se o conteúdo exceder o tamanho */
+}
+
+.titulo-section{
+    color: #D2F3F9;
+    text-align: center;
+
+    margin: 0px;
+    padding: 1rem;
+    padding-top: 2rem;
+}
+
+/* SEARCH SECTION ------------------------------------------------------------------ */
+
+.search-section{
+    flex: 0 0 20%; /* Não cresce, não encolhe, base de 20% */
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.search-panel{
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    gap: 2rem;
+}
+
+input.campo-pesquisa{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    
+    background-color: #000000b4;
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem;
+
+    width: 15rem;
+    padding: 1.2rem; /* Espaçamento interno */
+    color: #45474B; /* Cor do texto */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    transition: background-color 0.5s ease;
+}
+
+input.campo-pesquisa:focus{
+    background-color: #02010057;
+    outline:none;
+}
+
+input.campo-pesquisa:hover {
+    background-color: #02010057;
+}
+
+button.botao-pesquisa {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.4rem; /* Borda arredondada */
+
+    background-color: #2BFDBE; /* Cor de fundo do botão */
+    color: #01080E; /* Cor do texto do botão */
+
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+
+    font-size: 1rem; /* Tamanho da fonte */
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s linear;
+}
+
+button.botao-pesquisa:hover {
+    animation: alternate-reverse 0.3s linear infinite;
+
+    background-color: #8affdc; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.item-correspondente-encontrado{
+    margin: auto;
+    padding: 2rem;
+
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color: #8c8d8d;
+}
+
+.resultado-busca{
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+    padding-bottom: 5rem;
+
+    overflow: auto;
+}
+
+.alerta-pesquisa {
+    font-size: 15px;
+    letter-spacing: 0.05rem;
+
+    margin: auto;
+    padding: 2rem;
+    padding-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.paragrafo-alerta{
+    font-weight: 500;
+    color: #2bfdbeb7;
+}
+
+.alerta-pesquisa ul{
+    color: #D7F9FF;
+    list-style: none;
+    font-weight: 500;
+}
+
+.paragrafo-lista-plataformas{
+    font-weight: 600;
+    text-align: center;
+    color: #D7F9FF;
+}
+
+.paragrafo-plataforma-aleatoria{
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+
+    color: #38ffc3b7;
+}
+/* ABOUT ----------------------------------------------------------------------------------- */
+
+.description-result {
+    margin: auto;
+    padding: 7rem;
+    padding-top: 2rem;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transição suave */
+}
+
+.visible {
+    opacity: 1;
+}
+
+.description-section{
+    flex: 1; 
+    background-color: #0D0D0D;
+    /* box-shadow: inset 1px 1px 40px #111111; */
+    /* background-color: #131315;
+    box-shadow: inset 1px 1px 40px #1d1d20; */
+}
+
+/* CODE ----------------------------------------------------------------------------------- */
+.code-example-section{
+    flex: 1; 
+    /* background-color: #0D0D0D;
+    box-shadow: inset 1px 1px 40px #111111; */
+    background-color: #131315;
+    /* box-shadow: inset 1px 1px 40px #1d1d20; */
+}
+
+.code-example{
+    margin: auto;
+    padding: 6rem;
+    padding-top: 2rem;
+}
+/* ----------------------------------------------------------------------------------- */
+
+/* Estilo para o bloco de código */
+pre {
+    background-color: #1E1F20; 
+    /* border: 1px solid #ddd;    Borda */
+    padding: 10px;            
+    border-radius: 12px 12px 12px 12px;        
+    overflow-x: auto;          
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+
+code {
+
+    /*
+    8affdc
+    9084ff
+    */
+    color: #21ffb5;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+/* Estiliza o rodapé da página */
+footer {
+    margin-top: 2rem;
+    background-color: #02010057; /* Cor de fundo do rodapé */
+    color: #45474B; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 0; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    font-size: 1rem; /* Tamanho da fonte */
+}

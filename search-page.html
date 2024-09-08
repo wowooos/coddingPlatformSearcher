@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search-style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho" id="cabecalho">
+
+    </header>
+
+    <main>
+        <!-- ABA DE BUSCA DO USUÁRIO -->
+        <section class="search-section">
+            <h2 class="titulo-section">SEARCH</h2>
+            <div class="search-panel">
+                <input type="text" placeholder=" /  Search" id="campo-pesquisa" class="campo-pesquisa">
+                <button onclick="pesquisar()" class="botao-pesquisa">Buscar</button>
+                <div class="resultado-busca" id="resultado-busca"></div>
+            </div>
+
+        </section> 
+
+        <!-- ABA QUE EXIBE INFORMAÇÕES SOBRE A BUSCA -->
+        <section class="description-section">
+            <h2 class="titulo-section">ABOUT</h2>
+            <div class="description-result hidden" id="description-result" ></div>
+        </section> 
+
+        <!-- ABA QUE EXIBE UM EXERCÍCIO EXEMPLO DA PLATAFORMA BUSCADA -->
+        <section class="code-example-section" id="code-example-section">
+            <h2 class="titulo-section">CODE EXERCISE EXAMPLE</h2>
+            <div class="code-example hidden" id="code-example"></div>
+        </section> 
+    </main>
+
+    <footer>
+        <p>2024 - Codding Platform Searcher. All rights reserved ©</p>
+    </footer>
+    <script src="dados.js"></script> 
+    <script src="app.js"></script>
+
+</body>
+</html>
+
