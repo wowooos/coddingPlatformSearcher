@@ -25,7 +25,7 @@ Este projeto foi desenvolvido com o uso das tecnologias:
 
 ## Acessar o Site
 
-[https://codding-platform-searcher.vercel.app/search-page.html](https://codding-platform-searcher.vercel.app/search-page.html)
+[https://codding-platform-searcher.vercel.app/](https://codding-platform-searcher.vercel.app/)
 
 ## Contato
 
