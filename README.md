@@ -12,6 +12,9 @@ O **Codding Platform Searcher** contém no total dez plataformas com diferentes 
 
 As informações e os exercícios foram todos buscados e gerados pelo **Gemini AI**, responsável pela criação dos dados do projeto. 
 
+![Página inicial](https://github.com/user-attachments/assets/8a6199d3-8a8e-4ce3-97f0-6bc5d54ca4d9)
+![Página de busca](https://github.com/user-attachments/assets/173b4928-eb7d-4303-8716-feee17e0b99e)
+
 ## Tecnologias
 
 Este projeto foi desenvolvido com o uso das tecnologias:
